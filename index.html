@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Othniel47 Resume & Card</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+   function saveResume() {
+  const content = document.getElementById('resume-content').innerHTML;
+  localStorage.setItem('resume', content);
+  alert("Resume saved!");
+}
+
+function loadResume() {
+  const content = localStorage.getItem('resume');
+  if (content) {
+    document.getElementById('resume-content').innerHTML = content;
+    alert("Resume loaded!");
+  } else {
+    alert("No saved data found.");
+  }
+}
+  </script>
+  <style>
+   body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: #f4f4f4;
+  color: #333;
+}
+
+.card, .resume {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.profile-img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+[contenteditable] {
+  border: 1px dashed transparent;
+  padding: 2px;
+}
+
+[contenteditable]:focus {
+  border: 1px dashed #007bff;
+  outline: none;
+}
+  </style>
+</head>
+<body>
+  <section class="card">
+    <img src="assets/profile-pic.jpg" alt="Profile" class="profile-img" />
+    <h1 contenteditable="true">Jonathan A. Sadullo</h1>
+    <p contenteditable="true">AI Developer | Customer Support | Web Designer</p>
+    <div class="contact-info">
+      <p contenteditable="true">📞 +639999681185</p>
+      <p contenteditable="true">📧 jonathansadullo46@gmail.com</p>
+      <p contenteditable="true">📍 Baguio City, PH</p>
+    </div>
+  </section>
+
+  <section class="resume">
+    <h2>Resume</h2>
+    <div contenteditable="true" id="resume-content">
+      <h3>Work Experience</h3>
+      <ul>
+        <li>Taxi Driver at Teddy & Betty Taxi (2023)</li>
+        <li>Customer Service at GrubHub (2025)</li>
+      </ul>
+      <h3>Skills</h3>
+      <p>HTML, CSS, JS, React, Python, Customer Service, Driving</p>
+      <h3>Education</h3>
+      <p>BS Commerce (Major in Accountancy, 24 Units)</p>
+    </div>
+    <button onclick="saveResume()">💾 Save</button>
+    <button onclick="loadResume()">📂 Load</button>
+  </section>
+
+  <script src="script.js"></script>
+  <script>post https://api.openai.com/v1/responses</script>
+</body>
+</html>

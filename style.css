@@ -1,0 +1,29 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: #f4f4f4;
+  color: #333;
+}
+
+.card, .resume {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.profile-img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+[contenteditable] {
+  border: 1px dashed transparent;
+  padding: 2px;
+}
+
+[contenteditable]:focus {
+  border: 1px dashed #007bff;
+  outline: none;
+}
