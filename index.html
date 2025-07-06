@@ -5,86 +5,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jonathan Acera Sadullo Resume & Business Card</title>
   <link rel="stylesheet" href="style.css" />
-  <script>
-   function saveResume() {
-  const content = document.getElementById('resume-content').innerHTML;
-  localStorage.setItem('resume', content);
-  alert("Resume saved!");
-}
-
-function loadResume() {
-  const content = localStorage.getItem('resume');
-  if (content) {
-    document.getElementById('resume-content').innerHTML = content;
-    alert("Resume loaded!");
-  } else {
-    alert("No saved data found.");
-  }
-}
-  </script>
-  <style>
-   body {
-  font-family: Arial, sans-serif;
-  padding: 20px;
-  background: #f4f4f4;
-  color: #333;
-}
-
-.card, .resume {
-  background: #fff;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.profile-img {
-  width: 100px;
-  border-radius: 50%;
-}
-
-[contenteditable] {
-  border: 1px dashed transparent;
-  padding: 2px;
-}
-
-[contenteditable]:focus {
-  border: 1px dashed #007bff;
-  outline: none;
-}
-  </style>
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
 </head>
 <body>
+  <header>
+    <h1>🌌 Jonathan Acera Sadullo Resume & Business Card</h1>
+    <p>AI Resume & Digital Identity of Jonathan A. Sadullo</p>
+  </header>
+
   <section class="card">
-    <img src="assets/jonathan.jpg" alt="Profile" class="profile-img" />
-    <h1 contenteditable="true">Jonathan Acera Sadullo</h1>
+    <img src="assets/profile-pic.jpg" alt="Profile" class="profile-img" />
+    <h2 contenteditable="true">Jonathan A. Sadullo</h2>
     <p contenteditable="true">AI Developer | Full Stack Web Developer| Customer Service Representative | Professional Driver | Life Coach</p>
     <div class="contact-info">
       <p contenteditable="true">📞 +639999681185</p>
       <p contenteditable="true">📧 jonathanasadullo47@gmail.com</p>
-      <p contenteditable="true">Baguio City, Philippines</p>
+      <p contenteditable="true">📍 Baguio City, PH</p>
     </div>
   </section>
 
   <section class="resume">
-    <h2>Personal Details</h2>
+    <h2>Resume</h2>
     <div contenteditable="true" id="resume-content">
       <h3>Work Experience</h3>
       <ul>
-        <li>Customer Service Representative at Foundever (January 2025 - Present)</li>
-        <li>Taxi Driver at Teddy & Betty Taxi (2023)</li>
-        <li>Company Driver at GML Courier and Cargo Forwarder</li>
+        <li>January 21, 2025 - Present: Customer Care Support - Foundever - Baguio City
+        Provided prompt and empathetic assistance to customers regarding their food delivery concerns, including order status, missing or incorrect items, refunds, and app-related issues. Ensured high customer satisfaction by resolving problems efficiently through phone, chat, and email support. Maintained a positive and professional tone while handling a high volume of inquiries in a fast-paced environment.</li>
+        <li>September 2023 - December 2023 : Company Driver - GML Cargo Forwarder and Courier Express International - Metro Manila</li>
+        <li>March 2023 - September 2023: Taxi Driver - Teddy & Betty TaxiTeddy & Betty Taxi - Baguio City</li>
+        <li>October 2021 - December 2022 : Company Driver - GML Cargo Forwarder and Courier Express International - Metro Manila</li>
+      <li>December 2019 –March 2020 : Van Salesman – Gardenia Bakeries Philippines Inc., LIIP, Mamplasan, Laguna</li>
+      <li>May 2019 – October 2019 : Delivery Driver – Biomate Corporation / Julie’s Bakeshop – Baguio</li>
+      <li>September 2018 – March 2019 : Family Driver / Gardener - MACS - Santa	 Rosa, Laguna</li>
+      <li>July 2018 – September 2018 : Delivery Rider - Excel Quality Inc. Metro Manila</li>
+      <li>May 2017 - April 2018 : Family Driver / Gardener - MACS - Santa Rosa, Laguna</li>
+      <li>January 2017 - April 2017 : Delivery Rider - Camping Date - Baguio City</li>
+      <li>February 2016 - August 2016 : Customer Service Representative - Phoenix BPO - Baguio City
+      Engage with customers via phone, email, or chat to provide exceptional service.
+Proactively promote discounts and special offers on our services to maximize customer satisfaction and sales.
+Clearly communicate the value of additional free offers to enhance the customer experience.
+Assist customers in understanding and redeeming promotions, ensuring a seamless process.
+Maintain a deep understanding of our products/services and promotional offerings.
+Handle customer inquiries and resolve issues effectively, aiming for first-contact resolution.
+Collaborate with the sales team to identify opportunities for upselling and cross-selling.
+Keep accurate records of customer interactions and transactions for future reference.
+Strive to meet and exceed individual and team targets for promotion uptake and customer satisfaction.</li>
+       <li>March 6, 2015 – April 6, 2015 : Customer Service Associate – Global Axxess Solutions – Baguio City
+Provide exceptional customer service by assisting travelers in understanding and accessing free accommodation options.
+Promote and explain the benefits of the company's free accommodation program to potential users.
+Address customer inquiries and concerns through various channels, including phone, email, and live chat.
+Guide customers through the registration and booking process, ensuring a seamless experience.
+Collaborate with the marketing team to stay informed about promotional offers and campaigns.
+Maintain accurate and detailed records of customer interactions in the CRM system.</li>
+      <li>May 2013 – August 10, 2014 : Kitchen, Bar, Dining and Security Staff – Windsor Tavern – Sta. Rosa, Laguna</li>
       </ul>
       <h3>Skills</h3>
       <p>HTML, CSS, JS, React, Python, Customer Service, Driving</p>
       <h3>Education</h3>
       <p>BS Commerce (Major in Accountancy, 24 Units)</p>
     </div>
-    <button onclick="saveResume()">💾 Save</button>
-    <button onclick="loadResume()">📂 Load</button>
+    <div class="btn-group">
+      <button onclick="saveResume()">💾 Save</button>
+      <button onclick="loadResume()">📂 Load</button>
+      <button onclick="improveText()">✨ AI Improve</button>
+      <button onclick="exportPDF()">📄 Export PDF</button>
+    </div>
   </section>
 
+  <section class="business-card">
+    <h2>📇 Digital Business Card</h2>
+    <a download="Othniel47.vcf" href="data:text/vcard;charset=utf-8,BEGIN:VCARD
+VERSION:3.0
+N:Sadullo;Jonathan;;;
+FN:Jonathan A. Sadullo
+TEL;TYPE=cell:+639999681185
+EMAIL:jonathansadullo47@gmail.com
+ADR:Baguio City, PH
+ORG:ShadowAI Lab
+TITLE:AI Developer
+END:VCARD">📥 Download vCard</a>
+    <div id="qrcode"></div>
+  </section>
+
+  <!-- Chatbot -->
+  <df-messenger intent="WELCOME" chat-title="ShadowBot" agent-id="YOUR_DIALOGFLOW_CHATBOT_ID" language-code="en"></df-messenger>
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+
   <script src="script.js"></script>
-  <script>post https://api.openai.com/v1/responses</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </body>
 </html>
